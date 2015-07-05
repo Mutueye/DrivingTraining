@@ -1,0 +1,31 @@
+.slider-area
+	width 100%
+	height 380px
+	display block
+	overflow hidden
+	background-image url('images/slider_1.jpg')
+	background-position center center
+#mainCarousel
+	.item 
+		img
+			width 100%
+			height auto
+.owl-controls
+	position absolute
+	width 100%
+	margin 0px
+	bottom 0px
+	@media MOBILE
+		bottom -5px
+	.owl-page
+		span
+			background #ffffff !important
+			margin 5px !important
+			cursor pointer
+			@media MOBILE
+				width 6px !important
+				height 6px !important
+				margin 5px 2px !important
+	.active
+		span
+			cursor default

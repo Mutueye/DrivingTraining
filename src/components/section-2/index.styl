@@ -1,0 +1,72 @@
+.section-services
+	width 100%
+	height auto
+	.row-content
+		overflow hidden
+	.service-block
+		width 100%
+		height auto
+		border 1px solid #ffffff
+		display block
+		text-decoration none
+		.service-block-pic
+			width 100%
+			height auto
+			overflow visible
+			display block
+			position relative
+			img
+				width 100%
+				height auto
+				display block
+				box-sizing border-box
+				border 3px solid #ffffff
+				border-bottom none
+			.service-block-title
+				width 100px
+				height 36px
+				border 2px solid #ffffff
+				position absolute
+				left 50%
+				margin-left -54px
+				text-align center
+				font-size 16px
+				line-height 36px
+				background-color OCEAN_BLUE
+				color #ffffff
+				bottom -22px
+				overflow visible
+				@media MOBILE
+					border 2px solid #ffffff
+					bottom -20px
+				&-deco
+					width 100px
+					height 10px
+					background-color transparent
+					position absolute
+					border-top 1px solid YELLOW
+					bottom -13px
+					left 0px
+					background-image url('images/section-2-title-deco.png')
+					background-position top center
+					background-repeat no-repeat
+					@media MOBILE
+						background-size 7px
+		.service-block-text
+			width auto
+			overflow hidden
+			height auto
+			background-color #ffffff
+			padding 40px 30px 30px 30px
+			font-size 14px
+			line-height 24px
+			color GRAY_33
+			text-align center
+			@media MOBILE
+				padding 30px 15px 15px 15px
+				font-size 12px
+				line-height 20px
+		&:hover
+			border 1px solid OCEAN_BLUE
+			.service-block-title
+				background-color DEEP_BLUE

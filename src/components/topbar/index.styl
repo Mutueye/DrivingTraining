@@ -1,0 +1,139 @@
+.topbar
+	width 100%
+	height 80px
+	background-color #ffffff
+	position fixed
+	z-index 9999
+	box-shadow 0 0 20px 0px rgba(black,0.1)
+	@media MOBILE
+		height 54px
+	.logo
+		width 100px
+		height 52px
+		background-image url('images/logo.png')
+		position absolute
+		top 14px
+		left 0px
+		@media MOBILE
+			width 58px
+			height 30px
+			background-size 100%
+			top 12px
+	.menu
+		width auto
+		height 80px
+		overflow hidden
+		position absolute
+		top 0px
+		right COMMON_SPACE
+		@media MOBILE
+			width 40%
+			height auto
+			top 54px
+			right -40%
+			bottom -100px
+			display block
+			position fixed
+			z-index 9988
+			background-color #f5f5f5
+			transition(all 0.2s ease-out)
+			&.show
+				right 0px
+		.menubtn
+			float left
+			width auto
+			padding 0px
+			margin-left 25px
+			margin-top 20px
+			padding-bottom 6px
+			height 40px
+			text-align center
+			display block
+			text-decoration none
+			background-color transparent
+			border-bottom 2px solid #ffffff
+			transition(all 0.2s ease-in-out)
+			@media MOBILE
+				margin 0
+				padding 0
+				width 100%
+				height auto
+				display block
+				height auto
+				padding 10px 0px
+				border-bottom 1px solid GRAY_E3
+				text-align center
+				font-size 16px
+				color GRAY_33
+				text-decoration none
+				background-color transparent
+				border-radius 0px
+			&.sel, &:hover
+				border-bottom 2px solid OCEAN_BLUE
+				.text-cn
+						color GRAY_33
+					.text-en
+						color GRAY_66
+				@media MOBILE
+					border-bottom 1px solid #ffffff
+					background-color OCEAN_BLUE
+					.text-cn
+						color #ffffff
+					.text-en
+						color #ffffff
+			.text-cn
+				width auto
+				text-align center
+				font-size 18px
+				color GRAY_66
+				line-height 24px
+			.text-en
+				width auto
+				text-align center
+				font-size 10px
+				color GRAY_99
+				line-height 16px
+		.menu-dvline
+			width 1px 
+			height 40px
+			margin-top 20px
+			float left
+			display block
+			margin-left 25px
+			background-color GRAY_F5
+			@media MOBILE
+				display none
+	.btn-mobile-menu
+		width 54px
+		height 54px
+		position absolute
+		display none
+		right 0px
+		background-image url('images/icon-mobile-menu.png')
+		background-repeat no-repeat
+		background-position center center
+		background-size 32px 26px
+		@media MOBILE
+			display block
+.topbar-space
+	width 100%
+	height 80px
+	display block
+	overflow hidden
+	@media MOBILE
+		height 54px
+.mobile-menu-bg
+	width auto
+	height auto
+	display none
+	top -100px
+	right -100px
+	bottom -100px
+	left -100px
+	position fixed
+	z-index 8888
+	background-color rgba(black, .5)
+	@media MOBILE
+		display none
+		&.show
+			display block

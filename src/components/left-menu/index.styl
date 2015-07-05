@@ -1,0 +1,110 @@
+.left-menu
+	width 100%
+	height auto
+	display block
+	overflow visible
+	position relative
+	background-color #ffffff
+	padding 10px 0 0.1px 0
+	@media MOBILE
+		padding 24px 0px 8px 0px
+		margin-top 14px
+		text-align center
+	.lm-title
+		position absolute
+		width 100%
+		height 92px
+		top -92px
+		background-color #ffffff
+		overflow visible
+		@media MOBILE
+			width 30%
+			height 40px
+			top -25px
+			left 50%
+			margin-left -15%
+		.lm-title-content
+			width auto
+			margin 4px
+			height 84px
+			display block
+			background-color OCEAN_BLUE
+			@media MOBILE
+				margin 2px
+				height 36px
+			.lm-title-cn
+				width 100%
+				text-align center
+				font-size 24px
+				height auto
+				line-height 40px
+				padding-top 10px
+				color #ffffff
+				@media MOBILE
+					font-size 15px
+					line-height 17px
+					padding-top 5px
+			.lm-title-en
+				width 100%
+				text-align center
+				font-size 14px
+				height auto
+				line-height 20px
+				color #ffffff
+				@media MOBILE
+					font-size 7px
+					line-height 12px
+		.lm-title-deco
+			position absolute
+			width 100%
+			height 11px
+			left 0px
+			bottom -11px
+			.lm-title-deco-content
+				margin 0px 20px
+				height 9px
+				border-top 2px solid YELLOW
+				background-color transparent
+				background-image url('images/left-menu-title-arrow.png')
+				background-repeat no-repeat
+				background-position top center
+				@media MOBILE
+					margin 0px 2px
+					border-top 1px solid YELLOW
+					background-size 8px
+
+	.lm-btn
+		width auto
+		display block
+		height 56px
+		margin 20px
+		padding 0 0 0 20px
+		line-height 56px
+		overflow hidden
+		color GRAY_66
+		text-decoration none
+		background-image url('images/left-menu-btn-arrow.png')
+		background-repeat no-repeat
+		background-position -30% center
+		transition(all 0.2s ease-in-out)
+		background-size 0
+		@media MOBILE
+			display inline-block
+			margin 4px
+			line-height 30px
+			font-size 12px
+			padding 0px 6px
+			height 30px
+			text-align center
+			background-image none
+			background-color lighten(OCEAN_BLUE,90%)
+			&.fix-too-small
+				padding 0px 30px
+		&:hover, &.sel
+			background-color lighten(OCEAN_BLUE,80%)
+			color DEEP_BLUE
+			background-position 85% center
+			background-size auto
+			@media MOBILE
+				background-color OCEAN_BLUE
+				color #ffffff
