@@ -1,0 +1,89 @@
+.page-header.navbar.navbar-fixed-top
+	// HEADER INNER
+	.page-header-inner
+		// LOGO
+		.page-logo
+			a(href="admin-01-userinfo.html")
+				img.logo-default(src="../../assets/admin/layout/img/logo.png" alt="logo" class="logo-default")
+			.menu-toggler.sidebar-toggler.hide
+
+		//RESPONSIVE MENU TOGGLER
+		a.menu-toggler.responsive-toggler(href="javascript:;" data-toggle="collapse" data-target=".navbar-collapse")
+
+		// TOP NAVIGATION MENU
+		.top-menu
+			ul.nav.navbar-nav.pull-right
+				// NOTIFICATION DROPDOWN
+				li.dropdown.dropdown-extended.dropdown-dark.dropdown-notification#header_notification_bar
+					a.dropdown-toggle(href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true")
+						i.icon-bell
+						span.badge.badge-default 6
+					ul.dropdown-menu
+						li.external
+							h3 您有12条未读消息
+							a(href="extra_profile.html") 查看全部
+						li
+							ul.dropdown-menu-list(data-handle-color="#637283")
+								li
+									a(href="javascript:;")
+										span.time 刚刚
+										span.details
+											span.label.label-sm.label-icon.label-success
+												i.fa.fa-check
+											|恭喜您通过科目二考试
+								li
+									a(href="javascript:;")
+										span.time 3分钟前
+										span.details
+											span.label.label-sm.label-icon.label-danger
+												i.fa.fa-warning
+											|您的预约已错过签到时间
+								li
+									a(href="javascript:;")
+										span.time 3小时前
+										span.details
+											span.label.label-sm.label-icon.label-warning
+												i.fa.fa-warning
+											|您的预约的课程即将开始
+								li
+									a(href="javascript:;")
+										span.time 9月12日
+										span.details
+											span.label.label-sm.label-icon.label-info
+												i.fa.fa-warning
+											|国庆放假通知
+								li
+									a(href="javascript:;")
+										span.time 刚刚
+										span.details
+											span.label.label-sm.label-icon.label-success
+												i.fa.fa-check
+											|恭喜您通过科目二考试
+								li
+									a(href="javascript:;")
+										span.time 3分钟前
+										span.details
+											span.label.label-sm.label-icon.label-danger
+												i.fa.fa-warning
+											|您的预约已错过签到时间
+
+				// BEGIN USER LOGIN DROPDOWN
+				li.dropdown.dropdown-user.dropdown-dark
+					a.dropdown-toggle(href="javascript:;"  data-toggle="dropdown" data-hover="dropdown" data-close-others="true")
+						img.img-circle(src="assets/admin/layout/img/avatar3_small.jpg")
+						span.username.username-hide-on-mobile 徐龙象
+						i.fa.fa-angle-down
+					ul.dropdown-menu.dropdown-menu-default
+						li
+							a(href="javascript:;")
+								i.icon-user
+								|个人信息
+						li
+							a(href="javascript:;")
+								i.icon-lock
+								|锁屏
+						li
+							a(href="javascript:;")
+								i.icon-key
+								|登出
+.clearfix

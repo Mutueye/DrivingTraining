@@ -125,7 +125,7 @@ function template(callback) {
 function style(callback) {
 	var base = './src/apps/' + APP_NAME;
 
-	gulp.src(base + '/index.styl', { base: base })
+	gulp.src(base + '/*.styl', { base: base })
 		.pipe(plumber())
 		.pipe(stylus())
 		.pipe(prefix('last 2 versions', { cascade: true }))
