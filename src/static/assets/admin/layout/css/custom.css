@@ -59,11 +59,19 @@ Change Quick Sidebar Width
 }
 */
 
-/*调整字体*/
-html, body, h1, h2, h3, h4, h5, h6, .label, .dropdown-menu{
-  font-family:'microsoft yahei';
+/* Utilities */
+.col-no-padding{
+  padding-left:0px;
+  padding-right:0px;
 }
 
+/*调整字体*/
+html, body, h1, h2, h3, h4, h5, h6, .label, 
+.dropdown-menu, 
+.datepicker table td,
+.datepicker table th{
+  font-family:'microsoft yahei' !important;
+}
 
 /*调整内容区边距尺寸*/
 @media (min-width: 992px){

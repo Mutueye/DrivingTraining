@@ -1,0 +1,51 @@
+.portlet.light.margin-top-20
+	.portlet-title.tabbable-line
+		.caption.bold
+			i.icon-flag.font-green-sharp
+			span.caption-subject.font-green-sharp.uppercase 注册
+	.portlet-body.form
+		form.form-horizontal(action="#")
+			.form-body
+				.form-group
+					label.col-md-4.col-no-padding.control-label 昵称：
+					.col-md-5
+						input.form-control(type="text" placeholder="请输入昵称")
+				.form-group
+					label.col-md-4.col-no-padding.control-label 手机号：
+					.col-md-5
+						input.form-control(type="text" placeholder="请输入手机号")
+				.form-group
+					label.col-md-4.col-no-padding.control-label 验证码：
+					.col-md-5
+						.input-group
+							input.form-control(type="text" placeholder="输入6位数验证码")
+							.input-group-btn
+								button.btn.blue(type="button") 发送验证码
+						span.help-block 点击“发送验证码”即可发送验证码到您所填写手机号的手机上
+				.form-group
+					label.col-md-4.col-no-padding.control-label 密码：
+					.col-md-5
+						input.form-control(type="password")
+				.form-group
+					label.col-md-4.col-no-padding.control-label 确认密码：
+					.col-md-5
+						input.form-control(type="password")
+				//.form-group
+				//	label.col-md-4.col-no-padding.control-label 邮箱：
+				//	.col-md-5
+				//		input.form-control(type="text" placeholder="请输入您的邮箱")
+				//.form-group
+				//	label.col-md-4.col-no-padding.control-label 性别：
+				//	.col-md-5
+				//		select.form-control
+				//			option 男
+				//			option 女
+				//.form-group
+				//	label.col-md-4.col-no-padding.control-label 出生日期：
+				//	.col-md-5
+				//		input.form-control.date-picker(size="16" type="text" value="" placeholder="点击选择出生日期")
+				.row.margin-top-20
+					.col-md-offset-4.col-md-5
+						//button.btn.blue(type="submit") 注册
+						a.btn.blue(href="admin-register-success.html") 注册
+						button.btn.default(type="submit") 取消

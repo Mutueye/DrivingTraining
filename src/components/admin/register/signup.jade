@@ -1,0 +1,81 @@
+.portlet.light.margin-top-20
+	.portlet-title.tabbable-line
+		.caption.bold
+			i.icon-user-follow.font-green-sharp
+			span.caption-subject.font-green-sharp.uppercase 预报名
+			span.caption-helper &nbsp;&nbsp;完善报名信息
+	.portlet-body.form
+		form.form-horizontal(action="#")
+			.form-body
+				.form-group
+					label.col-md-4.col-no-padding.control-label 邮箱：
+					.col-md-5
+						input.form-control(type="text" placeholder="请输入您的邮箱")
+				.form-group
+					label.col-md-4.col-no-padding.control-label 性别：
+					.col-md-5
+						select.form-control
+							option 男
+							option 女
+				.form-group
+					label.col-md-4.col-no-padding.control-label 出生日期：
+					.col-md-5
+						input.form-control.date-picker(size="16" type="text" value="" placeholder="点击选择出生日期")
+				.form-group
+					label.col-md-4.col-no-padding.control-label 证件类型：
+					.col-md-5
+						select.form-control
+							option 身份证
+							option 护照
+				.form-group
+					label.col-md-4.col-no-padding.control-label 证件号码：
+					.col-md-5
+						input.form-control(type="text" placeholder="请输入您的证件号码")
+				.form-group
+					label.col-md-4.col-no-padding.control-label 报考类型：
+					.col-md-5
+						select.form-control
+							option C1
+							option C2
+				.form-group
+					label.col-md-4.col-no-padding.control-label 学历：
+					.col-md-5
+						select.form-control
+							option 本科
+							option 硕士
+							option 博士
+							option 专科	
+							option 高中
+							option 初中
+							option 小学
+				.form-group
+					label.col-md-4.col-no-padding.control-label 毕业院校：
+					.col-md-5
+						input.form-control(type="text" placeholder="请输入您的毕业院校")
+				.form-group
+					label.col-md-4.col-no-padding.control-label 住址：
+					.col-md-5
+						input.form-control(type="text" placeholder="请输入您的毕业院校")
+						span.help-block 请准确填写您的住址，将用于选择默认班车
+				.form-group
+					label.col-md-4.col-no-padding.control-label 班车站点：
+					.col-md-5
+						select.form-control
+							option 站点A
+							option 站点B
+							option 站点C
+				.form-group
+					label.col-md-4.col-no-padding.control-label 是否有车：
+					.col-md-5
+						select.form-control
+							option 是
+							option 否
+				.form-group
+					label.col-md-4.col-no-padding.control-label 已有车辆品牌型号：
+					.col-md-5
+						input.form-control(type="text" placeholder="请输入您的车辆品牌型号")
+				.row.margin-top-20
+					.col-md-offset-4.col-md-5
+						//button.btn.blue(type="submit") 下一步
+						a.btn.blue(href="admin-signup-date.html") 下一步
+						button.btn.default(type="submit") 取消
