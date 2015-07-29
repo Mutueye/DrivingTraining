@@ -68,34 +68,8 @@
 						a.more(href="javascript:;") 查看详细
 							i.m-icon-swapright.m-icon-white
 				.col-md-12.col-sm-12
-					.portlet.light
-						.portlet-title.tabbable-line
-							.caption.bold
-								i.icon-speedometer.font-green-sharp
-								.caption-subject.font-green-sharp 历史记录
-						.portlet-body
-							ul.feeds
-								li
-									a(href="javascript:;")
-										.col1
-											.cont
-												.cont-col1
-													.label.label-sm.label-success
-														i.fa.fa-bell-o
-												.cont-col2
-													.desc 新版驾校管控系统正式上线
-										.col2
-											.date 4小时前
-								li
-									.col1
-										.cont
-											.cont-col1
-												.label.label-sm.label-danger
-														i.fa.fa-bolt
-											.cont-col2
-													.desc 您已错过了7.20日2:00预约的课程
-									.col2
-										date 1天前
+					include ../history/index
+							
 
 			.portlet.light.tab-pane#tab_profile_2
 				.portlet-title.tabbable-line
@@ -122,9 +96,13 @@
 									input.form-control(type="text" placeholder="徐龙象")
 								.form-group
 									label.control-label 性别
-									select.form-control
-										option 男
-										option 女
+									.radio-list
+										label.radio-inline
+											input(type="radio" name="optionsRadios" id="optionsRadios1" value="男" checked)
+											|男
+										label.radio-inline
+											input(type="radio" name="optionsRadios" id="optionsRadios2" value="女")
+											|女
 								.form-group
 									label.control-label 手机号码
 									input.form-control(type="text" placeholder="13812345678")

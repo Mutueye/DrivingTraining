@@ -130,7 +130,7 @@ function style(callback) {
 		.pipe(stylus())
 		.pipe(prefix('last 2 versions', { cascade: true }))
 		.pipe(duration('Compiling Stylus for app "' + APP_NAME + '"'))
-		.pipe(gulp.dest(setDest()))
+		.pipe(gulp.dest(setDest('css')))
 		.pipe(run(callback));
 }
 

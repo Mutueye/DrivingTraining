@@ -1,0 +1,58 @@
+@require '../common'
+
+
+//注册流程示意图
+.register-flow-item
+	width 100%
+	height 72px
+	display block
+	overflow hidden
+	line-height 72px
+	font-size 24px
+	color #ffffff
+	margin-bottom:20px;
+	text-align center
+	background-image url('../images/register-flow.png');
+	background-repeat no-repeat
+	i
+		font-size 24px !important
+		line-height 72px !important
+		display block !important
+		width 100% !important
+		text-align center
+	&.first.normal
+		background-position center 0px
+	&.first.current
+		font-weight bold
+		color #ffff00
+		background-position center -100px
+	&.first.finished
+		background-position center -200px
+	&.middle.normal
+		background-position center -300px
+	&.middle.current
+		font-weight bold
+		color #ffff00
+		background-position center -400px
+	&.middle.finished
+		background-position center -500px
+	&.last.normal
+		background-position center -600px
+	&.last.current
+		font-weight bold
+		color #ffff00
+		background-position center -700px
+	&.last.finished
+		background-position center -800px
+.register-flow-title
+	width 100%
+	height auto
+	line-height 30px
+	font-size 15px
+	font-weight bold
+	margin 30px 0px 6px 0px
+	color #333333
+	text-align center
+
+@require '../../components/admin/exam/index'
+@require '../../components/admin/history/index'

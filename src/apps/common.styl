@@ -1,13 +1,13 @@
-@require './normalised'
-
 // colors
 GRAY_F5 = #f5f5f5
 GRAY_E3 = #e3e3e3
+GRAY_D6 = #d6d6d6
 GRAY_33 = #333333
 GRAY_66 = #666666
 GRAY_99 = #999999
-OCEAN_BLUE = #00adef
-DEEP_BLUE = #0c80e8
+BLUE = #3598dc
+OCEAN_BLUE = #4466c7
+DEEP_BLUE = #2d56b0
 ORANGE_RED = #e4420a
 YELLOW = #e89d0c
 GREEN = #09be00
@@ -28,6 +28,11 @@ transition()
 	-moz-transition arguments
 	-o-transition arguments
 	transition arguments
+box-shadow()
+	-webkit-box-shadow arguments
+	-moz-box-shadow arguments
+	-o-box-shadow arguments
+	box-shadow arguments
 
 //hidden
 .hidden
@@ -83,7 +88,7 @@ COMMON_WIDTH_WIDER = 1200px
 		width COMMON_WIDTH_WIDER + COMMON_SPACE
 	@media MOBILE
 		width 100%
-.row
+.full-content
 	width 100%
 	height auto
 	display block
@@ -132,6 +137,10 @@ COMMON_WIDTH_WIDER = 1200px
 .col-9of20
 	width 45%
 	float left
+.col-1of25{
+	width 4%
+	float left
+}
 .col-mobile-1of1
 	@media MOBILE
 		width 100%
@@ -164,6 +173,14 @@ COMMON_WIDTH_WIDER = 1200px
 	@media MOBILE
 		margin-right COMMON_SPACE_MOBILE
 		margin-bottom COMMON_SPACE_MOBILE
+.col-content-right
+	width auto
+	display block
+	margin-left COMMON_SPACE
+	margin-bottom COMMON_SPACE
+	@media MOBILE
+		margin-left COMMON_SPACE_MOBILE
+		margin-bottom COMMON_SPACE_MOBILE
 .inner-content
 	width auto
 	display block
@@ -184,3 +201,56 @@ COMMON_WIDTH_WIDER = 1200px
 		overflow hidden
 
 
+// font colors
+//-----------------------------------------------------------------------------------------
+.font-white{
+	color #ffffff
+}
+.font-ocean-blue{
+	color OCEAN_BLUE
+}
+.font-deep-blue{
+	color DEEP_BLUE
+}
+.font-orange-red{
+	color ORANGE_RED
+}
+.font-yellow{
+	color YELLOW
+}
+.font-green{
+	color GREEN
+}
+.font-brown{
+	color BROWN
+}
+.font-purple{
+	color PURPLE
+}
+
+// bg colors
+//-----------------------------------------------------------------------------------------
+.bgc-white{
+	background-color #ffffff !important
+}
+.bgc-ocean-blue{
+	background-color OCEAN_BLUE !important
+}
+.bgc-deep-blue{
+	background-color DEEP_BLUE !important
+}
+.bgc-orange-red{
+	background-color ORANGE_RED !important
+}
+.bgc-yellow{
+	background-color YELLOW !important
+}
+.bgc-green{
+	background-color GREEN !important
+}
+.bgc-brown{
+	background-color BROWN !important
+}
+.bgc-purple{
+	background-color PURPLE !important
+}

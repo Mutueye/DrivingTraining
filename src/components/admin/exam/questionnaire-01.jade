@@ -1,0 +1,53 @@
+h3.page-title
+	|问卷调查
+	small &nbsp;相关说明文字
+.row
+	.col-md-12.col-sm-12
+		.portlet.light
+			.portlet-body
+				form.form-questionnaire(role="form" action="#")
+					.form-group
+						label.control-label 1.文本框
+						input.form-control(type="text" placeholder="请输入")
+					.form-group
+						label.control-label 2.单选列表
+						.radio-list
+							label.radio-inline
+								input(type="radio" name="optionsRadios" id="optionsRadios1" value="男" checked)
+								|选项1
+							label.radio-inline
+								input(type="radio" name="optionsRadios" id="optionsRadios2" value="女")
+								|选项2
+					.form-group
+						label.control-label 3.多选列表
+						.checkbox-list
+							label.checkbox-inline
+								input(type="checkbox"  checked)
+								|选项1
+							label.checkbox-inline
+								input(type="checkbox")
+								|选项2
+					.form-group
+						label.control-label 4.下拉菜单
+						select.form-control
+							option 选项1
+							option 选项2
+					.form-group
+						label.control-label 5.文本域
+						textarea.form-control(rows="3")
+					a.btn.blue(href="#small"  data-toggle="modal")
+						|&nbsp;提交&nbsp;
+					a.btn.blue(href="javascript:;")
+						|&nbsp;取消&nbsp;
+
+.modal.fade.bs-modal-sm#small(tabindex="-1" role="dialog" aria-hidden="true")
+	.modal-dialog.modal-sm
+		.modal-content
+			.modal-header
+				button.close(type="button" data-dismiss="modal" aria-hidden="true")
+				h4.modal-title 确认提交
+			.modal-body
+				|感谢您的参与，您确定要提交吗？
+			.modal-footer
+				button.btn.blue(type="button" data-dismiss="modal") 取消
+				button.btn.blue(type="button") 提交
