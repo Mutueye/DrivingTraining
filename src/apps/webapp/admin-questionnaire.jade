@@ -40,7 +40,7 @@ body.page-header-fixed.page-sidebar-fixed.page-container-bg-solid
 			include ../../components/admin/sidebar/index-questionnaire
 		.page-content-wrapper
 			.page-content
-				include ../../components/admin/exam/questionnaire-01
+				include ../../components/admin/questionnaire/index
 
 	include ../../components/admin/footer/index
 
@@ -62,7 +62,62 @@ body.page-header-fixed.page-sidebar-fixed.page-container-bg-solid
 	script(src="assets/admin/layout/scripts/layout.js" type="text/javascript")
 
 	script(type='text/javascript').
+		jQuery.fn.evaluationStars =  function(){
+			var obj = jQuery(this);
+			var stars = obj.find(".fa");
+			var starArea = obj.find(".evaluation-kpi-stars");
+			var starsNum = stars.length;
+			var starsInfo = obj.find(".evaluation-kpi-info");
+			var currentNum = -1;
+			var targetNum = -1;
+			var formInput = obj.find(".stars-input");
+			setStarState(currentNum,starsNum);
+			stars.mouseover(function(){
+				targetNum = jQuery(this).index();
+				setStarState(targetNum,starsNum);
+			});
+			stars.click(function(){
+				currentNum = targetNum = jQuery(this).index();
+				setStarState(targetNum,starsNum);
+			});
+			starArea.mouseleave(function(){
+				setStarState(currentNum,starsNum);
+			});
+			function setStarState(num,total){
+				for(i = 0; i< total; i++){
+					var color = "star-color-"+num;
+					if(i <= num) {
+						stars.eq(i).removeClass("fa-star-o");
+						stars.eq(i).addClass("fa-star");
+						stars.eq(i).removeClass("star-color-0");
+						stars.eq(i).removeClass("star-color-1");
+						stars.eq(i).removeClass("star-color-2");
+						stars.eq(i).removeClass("star-color-3");
+						stars.eq(i).removeClass("star-color-4");
+						stars.eq(i).addClass(color);
+					} else {
+						stars.eq(i).addClass("fa-star-o");
+						stars.eq(i).removeClass("fa-star");
+						stars.eq(i).removeClass("star-color-1");
+						stars.eq(i).removeClass("star-color-2");
+						stars.eq(i).removeClass("star-color-3");
+						stars.eq(i).removeClass("star-color-4");
+						stars.eq(i).addClass("star-color-0");
+					}
+					starsInfo.eq(i).addClass("hidden");
+				}
+				if(num >= 0){
+					starsInfo.eq(num).removeClass("hidden");
+					formInput.val(num+1);
+				}
+			}
+		}
 		jQuery(document).ready(function() {
 			Metronic.init();
 			Layout.init();
+			for(var i= 1; i<= 2; i++){
+				for(var j=1; j<= 5; j++){
+					jQuery('#stars_'+i+'_'+j).evaluationStars();
+				}
+			}
 		});
